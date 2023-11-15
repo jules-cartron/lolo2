@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #000; /* Couleur de fond */
+        }
+
+        .image-container {
+            display: flex;
+            animation: moveBackground 10s linear infinite; /* Ajustez la durée selon vos besoins */
+        }
+
+        .image-container img {
+            width: 100vw; /* Largeur de l'image égale à la largeur de la fenêtre */
+            height: 100vh; /* Hauteur de l'image égale à la hauteur de la fenêtre */
+        }
+
+        @keyframes moveBackground {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-200%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <!-- Ajoutez ici vos images en utilisant des balises img -->
+        <img src="2.PNG" alt="Image 2">
+        <img src="1.PNG" alt="Image 2">
+        
+        <img src="1.PNG" alt="Image 2">
+        <img src="2.PNG" alt="Image 2">
+        <!-- Ajoutez autant d'images que nécessaire -->
+    </div>
+</body>
+</html>

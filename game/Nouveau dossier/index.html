@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changement d'image</title>
+</head>
+<body>
+
+    <img id="image1" alt="Obstacle 1">
+    <img id="image2" alt="Obstacle 2">
+
+    <script>
+        function changerImage(numero) {
+            // Listes des fichiers d'image pour chaque image
+            const listeFichiersImage1 = [
+                "police11.PNG",
+                "police21.PNG",
+                "police31.PNG",
+                "police41.PNG",
+                "police51.PNG",
+                "police61.PNG",   
+                "police71.PNG",
+                "police81.PNG", 
+                // Ajoutez d'autres fichiers d'image selon vos besoins
+            ];
+
+            const listeFichiersImage2 = [
+                "police12.PNG",
+                "police22.PNG",
+                "police32.PNG",
+                "police42.PNG",
+                "police52.PNG",
+                "police62.PNG",
+                "police72.PNG",
+                "police82.PNG",
+                // Ajoutez d'autres fichiers d'image selon vos besoins
+            ];
+
+            // Vérifier si le numéro est dans la plage valide
+            if (numero >= 1 && numero <= listeFichiersImage1.length) {
+                // Changer la source de la première image
+                document.getElementById("image1").src = listeFichiersImage1[numero - 1];
+            } else {
+                console.error("Numéro non valide pour l'image 1. Assurez-vous que le numéro est entre 1 et " + listeFichiersImage1.length);
+            }
+
+            // Vérifier si le numéro est dans la plage valide
+            if (numero >= 1 && numero <= listeFichiersImage2.length) {
+                // Changer la source de la deuxième image
+                document.getElementById("image2").src = listeFichiersImage2[numero - 1];
+            } else {
+                console.error("Numéro non valide pour l'image 2. Assurez-vous que le numéro est entre 1 et " + listeFichiersImage2.length);
+            }
+            
+        }
+
+        // Exemple : Appeler la fonction avec le numéro 3
+        console.log("obstaclemove")
+        const nombreAleatoire = Math.floor(Math.random() * 7) + 1;
+        console.log(nombreAleatoire);
+        changerImage(nombreAleatoire);
+    </script>
+
+</body>
+</html>
